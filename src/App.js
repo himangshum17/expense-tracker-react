@@ -1,7 +1,8 @@
+import Expenses from './components/Expenses/Expenses';
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello World</h1>
+    <div className='container lg:max-w-5xl mx-auto mt-20 px-4'>
+      <Expenses />
     </div>
   );
 }
