@@ -27,7 +27,7 @@ const Expenses = () => {
     },
   ];
   return (
-    <div className='divide-y divide-yellow-300 bg-yellow-100 px-4 rounded-lg'>
+    <div className='divide-y divide-yellow-300 bg-yellow-100 px-4 rounded-lg mt-6'>
       {expenselists.map((expenselist) => (
         <ExpenseItem key={expenselist.id} expenselist={expenselist} />
       ))}
