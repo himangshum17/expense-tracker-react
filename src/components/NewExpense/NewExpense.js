@@ -1,8 +1,15 @@
 import ExpenseForm from './ExpenseForm';
-const NewExpense = () => {
+const NewExpense = ({ onAddExpense }) => {
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString(),
+    };
+    onAddExpense(expenseData);
+  };
   return (
     <div className='bg-gray-800 p-4 rounded-lg'>
-      <ExpenseForm />
+      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
     </div>
   );
 };
